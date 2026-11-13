@@ -1,0 +1,15 @@
+name: ArmourRestricted
+version: 1.0.0
+main: com.armourrestricted.ArmourRestricted
+api-version: '1.21'
+author: ArmourRestricted
+description: Grind-based armor progression. Leather -> Iron -> Diamond -> Netherite.
+commands:
+  armourrestricted:
+    description: Armour Restricted main command
+    aliases: [ar, armour]
+    usage: /armourrestricted [book|progress|reload|setlevel|reset]
+permissions:
+  armourrestricted.admin:
+    description: Armour Restricted admin commands
+    default: op

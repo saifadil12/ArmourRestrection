@@ -1,0 +1,32 @@
+# Armour Restricted config. Stage 1 unlocks LEATHER, 2 = IRON, 3 = DIAMOND, 4 = NETHERITE.
+# Task types: KILL_PLAYERS, KILL_MOBS, TNT_BLASTS, TRAVEL, BLOCKS_MINED
+settings:
+  # Redstone/cannon TNT has no owner: credit goes to nearest player within this radius.
+  tnt-credit-radius: 48
+  # Killing the same player again within this time does not count.
+  same-victim-cooldown-seconds: 300
+
+stages:
+  - name: "Leather"
+    tasks:
+      - { type: BLOCKS_MINED, amount: 5000 }
+      - { type: KILL_MOBS, amount: 150 }
+      - { type: TRAVEL, amount: 20000 }
+  - name: "Iron"
+    tasks:
+      - { type: KILL_PLAYERS, amount: 10 }
+      - { type: BLOCKS_MINED, amount: 25000 }
+      - { type: TRAVEL, amount: 100000 }
+      - { type: TNT_BLASTS, amount: 200 }
+  - name: "Diamond"
+    tasks:
+      - { type: KILL_PLAYERS, amount: 50 }
+      - { type: BLOCKS_MINED, amount: 100000 }
+      - { type: TRAVEL, amount: 500000 }
+      - { type: TNT_BLASTS, amount: 1500 }
+  - name: "Netherite"
+    tasks:
+      - { type: KILL_PLAYERS, amount: 150 }
+      - { type: BLOCKS_MINED, amount: 500000 }
+      - { type: TRAVEL, amount: 2000000 }
+      - { type: TNT_BLASTS, amount: 5000 }
